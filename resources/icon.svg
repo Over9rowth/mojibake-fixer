@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451a03" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <linearGradient id="magic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)" />
+  <!-- 乱码与修复齿轮图符 -->
+  <path d="M60 100h60M60 130h40M60 160h50" stroke="#b45309" stroke-width="6" stroke-linecap="round" />
+  <text x="64" y="90" font-family="monospace" font-size="28" fill="#f87171">?âÊ</text>
+  <path d="M130 128 L160 128" stroke="url(#magic)" stroke-width="8" stroke-linecap="round" />
+  <polygon points="160,118 178,128 160,138" fill="#fbbf24" />
+  <text x="180" y="138" font-family="sans-serif" font-weight="bold" font-size="34" fill="#34d399">文</text>
+</svg>

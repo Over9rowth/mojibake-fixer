@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>乱码文件名修复台 - 用户使用说明书</title>
+  <style>
+    @page { size: A4; margin: 20mm; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #292524;
+      line-height: 1.6;
+      font-size: 13px;
+    }
+    h1 { font-size: 24px; color: #451a03; border-bottom: 2px solid #d97706; padding-bottom: 8px; margin-bottom: 16px; }
+    h2 { font-size: 16px; color: #b45309; margin-top: 20px; margin-bottom: 8px; border-left: 4px solid #d97706; padding-left: 8px; }
+    p { margin-bottom: 10px; }
+    ul { margin-bottom: 10px; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    .box { background: #fef3c7; border: 1px solid #fde68a; border-radius: 6px; padding: 12px; margin-bottom: 16px; }
+    .footer { margin-top: 30px; font-size: 11px; color: #78716c; text-align: center; border-top: 1px solid #e7e5e4; padding-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>乱码文件名修复台 (MojibakeFixer) v0.1.0 使用说明书</h1>
+  <p><strong>出品</strong>：Over9rowth &nbsp;|&nbsp; <strong>定位</strong>：跨平台与旧系统乱码文件名批量逆向诊断与事务回滚仪器</p>
+  
+  <div class="box">
+    <strong>【核心理念与观测边界】</strong><br>
+    乱码文件名修复台基于真实字符编码底层字节重映射原理，逆向推导跨平台解压（如 UTF-8 误按 GBK 解读、GBK 误按 Latin-1 解读）造成的损坏链路，并结合汉字频度评分算法给出最佳还原名。改名前强制生成事务备份，支持 100% 一键回滚。100% 本机离线运行。
+  </div>
+
+  <h2>一、主要功能特性</h2>
+  <ul>
+    <li><strong>6条经典误判逆向流水线</strong>：覆盖 UTF-8↔GBK、GBK↔Latin-1、UTF-8↔Latin-1、GBK↔Big5、Shift-JIS 及 URL 百分号编码残留。</li>
+    <li><strong>中文可读性评分器</strong>：结合 GB2312 常用汉字频度覆盖率、ASCII 合法文件名符号与 CJK 偏僻区惩罚，给出 0~100 分置信度。</li>
+    <li><strong>安全重命名事务保障</strong>：重命名前自动记录旧路径、新路径与时间戳至 JSON，随时可一键原路撤回。</li>
+    <li><strong>正常文件名保护机制</strong>：已正常的文件名自动标记为 ORIGINAL，绝不盲目破坏正常数据。</li>
+  </ul>
+
+  <h2>二、操作指南</h2>
+  <ul>
+    <li><strong>启动即用</strong>：打开程序自动加载 6 条典型乱码样本，右侧即刻呈现逆向还原结果与置信度。</li>
+    <li><strong>批量处理</strong>：直接在左侧粘贴文件列表，右侧实时输出推演结论。</li>
+    <li><strong>导出映射表</strong>：点击右上角「导出修复映射表 (JSON)」可获取完整的批量改名清单。</li>
+    <li><strong>离线说明书</strong>：点击「导出说明书 (PDF)」可将本手册离线保存。</li>
+  </ul>
+
+  <div class="footer">
+    Copyright © 2026 Over9rowth. All Rights Reserved. 纯本机离线运行 · 守护个人数据完整性
+  </div>
+</body>
+</html>
